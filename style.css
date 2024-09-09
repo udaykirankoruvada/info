@@ -1,0 +1,195 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+header {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    position: relative;
+}
+
+nav .brand {
+    position: relative;
+    height: 50px; /* Same height as the profile image */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+nav .brand a {
+    font-size: 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.5s ease;
+    position: relative;
+    z-index: 2;
+}
+
+nav .brand img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s ease, width 0.5s ease, height 0.5s ease, transform 0.5s ease;
+    z-index: 1;
+}
+
+nav .brand.shrink a {
+    opacity: 0;
+}
+
+nav .brand.shrink img {
+    opacity: 1;
+    width: 80px;  /* Adjust size as needed */
+    height: 80px;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 25px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: white;
+    color: #6e8efb;
+}
+
+/* Hero Section */
+.hero {
+    padding: 0px 150px;
+    color: white;
+    text-align: center;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0 0 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    padding: 10px 30px;
+    background-color: white;
+    color: #6e8efb;
+    border: none;
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: #6e8efb;
+    color: white;
+}
+
+/* Section Styles */
+section {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: auto;
+    opacity: 1; /* Ensure opacity is set to 1 */
+    transform: translateY(0); /* Ensure no translation applied */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h2 {
+    color: #6e8efb;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.bio, #projects, #certifications, #coursework, #contact {
+    text-align: center;
+}
+
+#about .profile-pic {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#about .profile-pic img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
